@@ -1,10 +1,12 @@
-import { createStackNavigator } from 'react-navigation'
-import Home from './Home'
-import Profile from './Profile'
+import React from 'react'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+import Navigation from './Navigation'
 
-const stackNavigator = createStackNavigator({
-  home: { screen: Home },
-  profile: { screen: Profile },
-})
+const App = () => (
+  <Provider store={store}>
+    <Navigation />
+  </Provider>
+)
 
-export default stackNavigator
+export default App
