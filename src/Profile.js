@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import Map from './Map'
 
 class Profile extends Component {
   render() {
     return (
       <View testID="profile-container" style={styles.container}>
-        <Text>
-          Profile
-        </Text>
+        <Map />
+        <View style={{ flex: 1 }} />
       </View>
     )
   }
@@ -16,8 +16,6 @@ class Profile extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 })
 
